@@ -36,7 +36,7 @@ const Routes = () => (
   <BrowserRouter>
     <Switch>
       <Padrao exact path="/" component={Login} />
-      <Route path="/signup" component={Register} />
+      <Padrao path="/register" component={Register} />
       <PrivateRoute path="/app" component={() => <h1>App</h1>} />
       <Route path="*" component={() => <h1>Page not found</h1>} />
     </Switch>
