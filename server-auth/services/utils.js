@@ -72,4 +72,33 @@ const token = async (req, res) => {
   return data;
 }
 
+const teste = (req, res) => {
+  let data = jwt.sign(payload, secret);
+  return data;
+}
+
+
+
+let config = 
+{
+    "secret": "some-secret-shit-goes-here",
+    "refreshTokenSecret": "some-secret-refresh-token-shit",
+    "port": 3000,
+    "tokenLife": 900,
+    "refreshTokenLife": 86400
+}
+
+const user = {
+            "email": 'joaopaulo.queiroz.545@gmail.com',
+        }
+
+const tokens = jwt.sign(user, config.secret, { expiresIn: config.tokenLife})
+    const refreshToken = jwt.sign(user, config.refreshTokenSecret, { expiresIn: config.refreshTokenLife})
+
+console.log(tokens);
+
+
+
+// console.log(ver)
+
 module.exports = {token}

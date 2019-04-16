@@ -16,7 +16,6 @@ router.post("/create", (req, res, next) => {
 });
 
 router.post("/login", async (req, res, next) => {
-  console.log(req.body);
   let token = await jwt.token(req.body.email);
 
   console.log(token)

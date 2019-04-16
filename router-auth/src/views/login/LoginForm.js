@@ -40,6 +40,7 @@ class LoginForm extends Component {
 
   render() {
     const { errors, email, password } = this.state;
+
     return (
       <form onSubmit={this.onSubmit}>
         <h1 className="text-center">Login</h1>
@@ -63,7 +64,7 @@ class LoginForm extends Component {
           />
         </div>
         <div className="form-group">
-          <button type="submit" className="btn btn-primary btn-lg">
+              <button type="submit" className="btn btn-primary btn-lg">
             Logar
           </button>
         </div>
